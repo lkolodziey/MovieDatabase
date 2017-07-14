@@ -24088,10 +24088,10 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "D:\\PRJ\\MovieDatabase\\MovieDatabase\\MovieDatabase.UWP\\MovieDatabase.UWP.csproj",
+      "projectUniqueName": "D:\\Projetos\\MovieDatabase\\MovieDatabase\\MovieDatabase\\MovieDatabase.UWP\\MovieDatabase.UWP.csproj",
       "projectName": "MovieDatabase.UWP",
-      "projectPath": "D:\\PRJ\\MovieDatabase\\MovieDatabase\\MovieDatabase.UWP\\MovieDatabase.UWP.csproj",
-      "projectJsonPath": "D:\\PRJ\\MovieDatabase\\MovieDatabase\\MovieDatabase.UWP\\project.json",
+      "projectPath": "D:\\Projetos\\MovieDatabase\\MovieDatabase\\MovieDatabase\\MovieDatabase.UWP\\MovieDatabase.UWP.csproj",
+      "projectJsonPath": "D:\\Projetos\\MovieDatabase\\MovieDatabase\\MovieDatabase\\MovieDatabase.UWP\\project.json",
       "projectStyle": "ProjectJson"
     },
     "dependencies": {
