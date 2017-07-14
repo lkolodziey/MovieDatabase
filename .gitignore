@@ -1,0 +1,6 @@
+*.suo
+[Bb]in
+obj/
+*.vspscc
+packages
+Documents

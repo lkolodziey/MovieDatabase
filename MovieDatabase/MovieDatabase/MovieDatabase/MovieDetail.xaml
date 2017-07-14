@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieDatabase.MovieDetail">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <ActivityIndicator x:Name="Indicator" IsRunning="True" />
+               
+                <Label>Movie Title</Label>
+                <Label FontSize="15" FontAttributes="Bold" x:Name="lblMovieTitle" />
+                <Label>Original Title</Label>
+                <Label FontSize="15" FontAttributes="Bold" x:Name="lblOriginalTitle" />
+                <Label>Original Language</Label>
+                <Label FontSize="15" FontAttributes="Bold" x:Name="lblReleaseDate" />
+                <Image x:Name="ImagePosterPath" />
+                <Label>Original Language</Label>
+                <Label FontSize="15" FontAttributes="Bold" x:Name="lblOriginalLanguage" />
+                <Label>Spoken Languages</Label>
+                <Label FontSize="15" FontAttributes="Bold" x:Name="lblSpokenLanguages" LineBreakMode="WordWrap" />
+                <Label>Genres</Label>
+                <Label FontSize="15" FontAttributes="Bold" x:Name="lblGenres" LineBreakMode="WordWrap"/>
+                <Label>Overview</Label>
+                <Label FontSize="15" FontAttributes="Bold" x:Name="lblOverview" LineBreakMode="WordWrap" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
