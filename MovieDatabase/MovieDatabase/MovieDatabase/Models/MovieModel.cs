@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace MovieDatabase.Models
@@ -9,13 +10,13 @@ namespace MovieDatabase.Models
         public int page { get; set; }
         public int total_results { get; set; }
         public int total_pages { get; set; }
-        public List<MovieResult> results { get; set; }
+        public ObservableCollection<Movies> results { get; set; }
         public bool HasError { get; set; }
         public string ErrorMessage { get; set; }
     }
 
 
-    public class MovieResult
+    public class Movies
     {
         public int id { get; set; }
         public string poster_path { get; set; }

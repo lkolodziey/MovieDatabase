@@ -1,4 +1,4 @@
-# MovieDatabase
+# MOVIE DATABASE
 
 GENERAL INFORMATION
 	This project was tested and could be used/compiled for Android devices/emulators and Windows 10.
