@@ -34,10 +34,10 @@ namespace MovieDatabase.Models
             var movieModel = service.GetMovies();
 
             ObservableCollection<Movies> list = movieModel.results;
-            foreach (var item in list)
-            {
-                item.poster_path = Helper.ImagePathHelper.GetFullImageURL(item.poster_path);
-            }
+            //foreach (var item in list)
+            //{
+            //    item.poster_path = Helper.ImagePathHelper.GetFullImageURL(item.poster_path);
+            //}
 
             MovieList = list;
         }

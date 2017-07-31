@@ -1,27 +1,37 @@
-﻿using System;
+﻿using MovieDatabase.Data;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace MovieDatabase.Models
 {
-    public class MovieDetailViewModel
+
+    public class MovieDetailViewModel : INotifyPropertyChanged
     {
-        public List<Genre> genres { get; set; }
-        public string original_language { get; set; }
-        public string original_title { get; set; }
-        public string overview { get; set; }
-        public string poster_path { get; set; }
-        public DateTime release_date { get; set; }
-        public List<spoken_language> spoken_languages { get; set; }
-        public string title { get; set; }
-        public bool HasError { get; set; }
-        public string ErrorMessage { get; set; }
+        public event PropertyChangedEventHandler PropertyChanged;
+        void OnPropertyChanged([CallerMemberName]string propertyName = "") => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
+        public MovieDetailModel _movie;
+
+        public MovieDetailModel movie
+        {
+            get { return _movie; }
+            set
+            {
+                _movie = value;
+                OnPropertyChanged("MovieList");
+            }
+        }
+
+        public MovieDetailViewModel(int id)
+        {
+            RESTService service = new RESTService();
+            movie = service.GetMovie(id);
+        }
     }
 
 
-    public class spoken_language
-    {
-        public string name { get; set; }
-        public string iso_639_1 { get; set; }
-    }
+
 }

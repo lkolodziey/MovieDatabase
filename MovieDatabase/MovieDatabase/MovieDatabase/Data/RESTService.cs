@@ -37,11 +37,6 @@ namespace MovieDatabase.Data
                         result.HasError = false;
                     }
                 }
-
-                //
-                //var uri = new Uri(string.Format(completeURL, string.Empty));
-                //var response = client.GetAsync(uri).Result;
-                //
             }
             catch (Exception ex)
             {
@@ -52,20 +47,23 @@ namespace MovieDatabase.Data
             return result;
         }
 
-        public async Task<MovieDetailViewModel> GetMovieInformation(int id)
+        public MovieDetailModel GetMovie(int id)
         {
-            MovieDetailViewModel result = new MovieDetailViewModel();
+            MovieDetailModel result = new MovieDetailModel();
             try
             {
-                //string completeURL = string.Format("{0}movie/{1}?api_key={2}&language=pt-BR", BaseURL, id, APIKey);
-                //var uri = new Uri(string.Format(completeURL, string.Empty));
-                //var response = await client.GetAsync(uri);
-                //if (response.IsSuccessStatusCode)
-                //{
-                //    var message = await response.Content.ReadAsStringAsync();
-                //    result = JsonConvert.DeserializeObject<MovieDetailViewModel>(message);
-                //    result.HasError = false;
-                //}
+                using (HttpClient client = new HttpClient())
+                {
+                    string completeURL = string.Format("{0}movie/{1}?api_key={2}&language=pt-BR", BaseURL, id, APIKey);
+                    var uri = new Uri(string.Format(completeURL, string.Empty));
+                    var response = client.GetAsync(uri).Result;
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var message = response.Content.ReadAsStringAsync().Result;
+                        result = JsonConvert.DeserializeObject<MovieDetailModel>(message);
+                        result.HasError = false;
+                    }
+                }
             }
             catch (Exception ex)
             {

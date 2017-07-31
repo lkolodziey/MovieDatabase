@@ -13,11 +13,14 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Data\RESTService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\GenreHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helper\ImagePathHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\LangagesHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\GenreModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\MovieDetailModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MovieDetailViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MovieModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MovieViewModel.cs" />

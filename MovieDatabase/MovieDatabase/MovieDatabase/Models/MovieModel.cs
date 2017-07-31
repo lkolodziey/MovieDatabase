@@ -19,7 +19,15 @@ namespace MovieDatabase.Models
     public class Movies
     {
         public int id { get; set; }
-        public string poster_path { get; set; }
+
+        private string _poster_path;
+        public string poster_path
+        {
+            get { return _poster_path; }
+            set { _poster_path = Helper.ImagePathHelper.GetFullImageURL(value); }
+        }
+
+
         public bool adult { get; set; }
         public string overview { get; set; }
         public DateTime release_date { get; set; }

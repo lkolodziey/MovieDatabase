@@ -11,7 +11,7 @@
         <ListView ItemsSource="{Binding MovieList}" CachingStrategy="RecycleElement" >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ImageCell ImageSource="{Binding poster_path}" Text="{Binding original_title}" Detail="{Binding overview}" />
+                    <ImageCell ImageSource="{Binding poster_path}" Text="{Binding original_title}" Detail="{Binding overview}" Tapped="ShowDetail" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

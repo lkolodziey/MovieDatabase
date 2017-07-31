@@ -5,24 +5,20 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
-                <ActivityIndicator x:Name="Indicator" IsRunning="True" />
-               
+            <StackLayout BindingContext="{Binding movie}">
                 <Label>Movie Title</Label>
-                <Label FontSize="15" FontAttributes="Bold" x:Name="lblMovieTitle" />
+                <Label FontSize="15" FontAttributes="Bold" Text="{Binding title}" />
                 <Label>Original Title</Label>
-                <Label FontSize="15" FontAttributes="Bold" x:Name="lblOriginalTitle" />
+                <Label FontSize="15" FontAttributes="Bold" Text="{Binding original_title}" />
                 <Label>Original Language</Label>
-                <Label FontSize="15" FontAttributes="Bold" x:Name="lblReleaseDate" />
-                <Image x:Name="ImagePosterPath" />
-                <Label>Original Language</Label>
-                <Label FontSize="15" FontAttributes="Bold" x:Name="lblOriginalLanguage" />
+                <Label FontSize="15" FontAttributes="Bold" Text="{Binding original_language}" />
+                <Image Source="{Binding poster_path}" />
                 <Label>Spoken Languages</Label>
-                <Label FontSize="15" FontAttributes="Bold" x:Name="lblSpokenLanguages" LineBreakMode="WordWrap" />
+                <Label FontSize="15" FontAttributes="Bold" Text="{Binding spoken_languages_list}" LineBreakMode="WordWrap" />
                 <Label>Genres</Label>
-                <Label FontSize="15" FontAttributes="Bold" x:Name="lblGenres" LineBreakMode="WordWrap"/>
+                <Label FontSize="15" FontAttributes="Bold" Text="{Binding genres_list}" LineBreakMode="WordWrap"/>
                 <Label>Overview</Label>
-                <Label FontSize="15" FontAttributes="Bold" x:Name="lblOverview" LineBreakMode="WordWrap" />
+                <Label FontSize="15" FontAttributes="Bold" Text="{Binding overview}" LineBreakMode="WordWrap" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
